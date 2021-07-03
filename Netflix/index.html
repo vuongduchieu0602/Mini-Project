@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Patrol | Netflix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <a href="" class="logo">
+            <img src="./img/logo.png" alt="Netflix">
+        </a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">My list</a></li>
+            <li><a href="#">My list</a></li>
+            <li><a href="#">My list</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="banner">
+        <img src="https://occ-0-325-395.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABYl1s_xdAF7B8oLFHwCVzaiZ0dCJfyalybTYPzI15pOclSkfEoapZf06vWThL5TQ-fKO5V49BTcR_aAHfo6VogaLtWZI.jpg?r=a67" alt="Ghost patrol" 
+        class="bg">
+        <div class="content">
+            <img src="https://occ-0-325-395.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABZURGjJ_X__r-5fq0baQIjNfvJSBHSsFAMxueM8WIYMqqgjuzNjzExrV6uVN9XcbR1wIkRWTQ9nHLp1e0EXDoRJN6_pIpmiDOmzi.png?r=89e" alt="movieTitle"
+            class="movieTitle">
+            <h4>
+                <span>2021</span>
+                <span><i>12+</i></span>
+                <span>1h 55min</span>
+                <span>Action</span>
+            </h4>
+            <p>Two kids and their pet dog (aka the Ghost Patrol) get a call about an old manor and soon find they are investigating their first real haunted house.</p>
+            <div class="buttons">
+                <a href="#"><i class="fas fa-play-circle"></i>  Play</a>
+                <a href="#"><i class="fas fa-plus"></i>  My List</a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo();"><i class="fas fa-play-circle"></i>Watch Trailer</a>
+    </div>
+
+    <div class="trailer">
+        <video src="./video/Ghost Patrol VR - Announce Trailer.mp4" controls="true"></video>
+        <img src="https://nghiennhac.com/wp-content/uploads/2020/09/x-0.png" class="close" onclick="toggleVideo();">
+    </div>
+
+    <script>
+        function toggleVideo(){
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+            
+        }
+    </script>
+</body>
+</html>
